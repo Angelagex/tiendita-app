@@ -13,5 +13,12 @@ export const types = {
     itemUpdate: '[Item] Update items',
     itemDelete: '[Item] Delete items',
     itemClear: '[Item] Clear items',
-    itemLogoutClean:'[Item] Logout Item'
+    itemLogoutClean:'[Item] Logout Item',
+
+    productAddNew: '[Product] New products',
+    productLoad: '[Product] Load products',
+    productUpdate: '[Product] Update products',
+    productDelete: '[Product] Delete products',
+    productClear: '[Product] Clear products',
+    productLogoutClean:'[Product] Logout product'
 }

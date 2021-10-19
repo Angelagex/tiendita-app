@@ -1,5 +1,4 @@
-{
-    "data": [
+export const Data = [
         {
             "id": 1,
             "name": "Fabuloso Antibacterial 2L",
@@ -128,7 +127,7 @@
         },
         {
             "id": 13,
-            "name": "Tomate Importado",
+            "name": "   ",
             "alt": "Tomate-Importado",
             "precio": 2090,
             "medida": 500,
@@ -144,6 +143,4 @@
             "popularidad": "4",
             "image": "https://i.ibb.co/kqj4Qz4/Name-Limon.jpg"
         }
-    
     ]
-}

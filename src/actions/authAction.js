@@ -1,6 +1,6 @@
 import { firebase, googleAuthProvider } from "../firebase/firebase-config";
 import { types } from "../types/types";
-
+import {ListarProduct} from './productAction'
 import { startLoading, finishLoading } from "./uiErrors";
 import Swal from "sweetalert2";
 
@@ -12,6 +12,7 @@ export const startGoogleLogin = () => {
       .then(({ user }) => {
         dispatch(startLoading());
         dispatch(login(user.uid, user.displayName));
+        dispatch(ListarProduct())
       });
   };
 };

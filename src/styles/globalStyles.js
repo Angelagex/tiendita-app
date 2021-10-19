@@ -9,6 +9,7 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+
 }
 
 html {
@@ -21,6 +22,7 @@ html {
     @media only screen and (min-width: 1980px){
         font-size: 70%;
     }
+
 }
 body{
     font-family: 'Poppins', sans-serif;
@@ -29,7 +31,6 @@ body{
     font-size: 1.6rem;
     background: #FAFAF8;
     color: #333;
-
 }
 `;
 
@@ -41,6 +42,7 @@ export const Logo = styled.h1`
   height: 16px;
   left: 40px;
   top: 36px;
+  cursor: pointer;
 
   font-family: Inter;
   font-style: italic;
@@ -67,21 +69,20 @@ export const Bannercito = styled.div`
 `;
 
 export const BannerText = styled.h3`
+  position: absolute;
+  width: 796px;
+  height: 42px;
+  left: 285px;
+  top: 104px;
 
-position: absolute;
-width: 796px;
-height: 42px;
-left: 285px;
-top: 104px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
 
-font-family: Poppins;
-font-style: normal;
-font-weight: 600;
-font-size: 28px;
-line-height: 42px;
-
-color: #FEFEFE;
-`
+  color: #fefefe;
+`;
 
 export const Container = styled.div`
   display: flex;
@@ -92,15 +93,16 @@ export const Container = styled.div`
   position: static;
   width: 1286px;
   height: 560px;
-  left: 40px;
-  top: 330px;
+  margin-left: 40px;
+  margin-top: 350px;
+  margin-bottom: 50px;
 
   /* White */
 
   background: #fefefe;
   /* Shadows-2 */
 
-  box-shadow: 0px 11px 29px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 11px 29px rgba(0, 0, 0, 0.2);
   border-radius: 16px;
 
   &.products {
@@ -113,11 +115,46 @@ export const Container = styled.div`
     width: 1162px;
     height: 418px;
     left: 40px;
-    top: 102px;
+    margin-top: 10px;
     overflow-x: scroll;
+    overflow-y: hidden;
 
     box-shadow: none;
     border-radius: none;
+  }
+
+  &.items {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: static;
+    width: 922px;
+    height: 422px;
+    margin-left: 40px;
+    margin-top: 40px;
+    box-shadow: none;
+    border-radius: 16px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: rgba(7, 7, 117, 0.266);
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-corner {
+    background-color: black;
+  }
+  ::-webkit-scrollbar-button {
+    display: none;
   }
 `;
 
@@ -131,8 +168,7 @@ export const Button = styled.button`
   padding: 12px 24px;
 
   position: static;
-  width: ${({ big, small }) =>
-    big ? '623px' : small? '89px' : '194px'};
+  width: ${({ big, small }) => (big ? "623px" : small ? "89px" : "194px")};
   height: 40px;
   left: 0px;
   top: 378px;
@@ -151,10 +187,10 @@ export const Button = styled.button`
 
   &:hover {
     background-color: #07773b;
-    transform: translateY(-0.5rem) scale(1.02);
+    transform: translateY(-0.2rem) scale(1.02);
     color: #e4e4e4;
   }
   &:active {
-    transform: translateY(0.5rem);
+    transform: translateY(0.2rem);
   }
 `;

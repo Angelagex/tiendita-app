@@ -11,16 +11,16 @@ let fileUrl=[]
 export const ItemNew = (item) => {
     return async (dispatch, getSate) => {
         const uid = getSate().auth.uid
-       
+        delete item.id; 
+
         const newItem = {
-            title: item.title,
-            responsible: item.responsible,
-            description: item.description,
-            priority: item.priority,
-            url: fileUrl
-            
+            nombre: item.nombre,
+            precio: item.precio,
+            medida: item.medida=="Unidades"? item.medida : 500,
+            imagen: fileUrl            
         }
-        const docRef = await db.collection(`${uid}/Item/data`).add(newItem)
+        
+        const docRef = await db.collection(`${uid}/Cart`).add(newItem)
         dispatch(addNewItem(docRef.id, newItem))
 
     }
@@ -66,7 +66,6 @@ export const Delete = (id) => {
     return async (dispatch, getState) => {
 
         const uid = getState().auth.uid;
-        const item = getState().auth.item;
 
         await db.doc(`${uid}/Item/data/${id}`).delete();
 

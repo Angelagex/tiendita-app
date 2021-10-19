@@ -1,15 +1,14 @@
 import React from "react";
-//import AppRouter from "../routes/AppRouter";
+import AppRouter from "../routes/AppRouter";
 import GlobalStyles from "../styles/globalStyles";
 import { Provider } from "react-redux";
 import { store } from "../store/store";
-import Routess from "../routes/index"
 
 const AppTienda = () => {
   return (
     <GlobalStyles />,
       <Provider store= {store}>
-        <Routess />
+        <AppRouter />
       </Provider>
   );
 };

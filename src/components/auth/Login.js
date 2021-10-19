@@ -1,18 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import {
   startLoginEmailPassword,
   startGoogleLogin,
 } from "../../actions/authAction";
 import { useForm } from "../../hooks/useForm";
-import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
-import Registro from "./Register";
 
 const Login = () => {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
 
   const dispatch = useDispatch();
 
@@ -37,15 +32,6 @@ const Login = () => {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Login
-      </Button>
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Inicia Sesión para continuar</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
           <div className="Registro py-5 container text-center">
             <form className="form-signin">
               <input
@@ -111,12 +97,9 @@ const Login = () => {
                   <b>Sign in with Facebook</b>
                 </p>
               </div>
-
-              <Registro/>
+              <Link to="/register">Registro</Link>
             </form>
           </div>
-        </Modal.Body>
-      </Modal>
     </>
   );
 };

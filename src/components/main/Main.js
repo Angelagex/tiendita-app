@@ -8,7 +8,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Dropdown from "react-bootstrap/Dropdown";
 import Login from "../auth/Login";
 import { startLogout } from "../../actions/authAction";
-import {AdminPanel} from '../appcontrol/AdminPanel'
+//import {AdminPanel} from '../appcontrol/AdminPanel'
 import AddProduct from "../appcontrol/AddProduct";
 import { ItemsViewer } from "./ItemsViewer";
 

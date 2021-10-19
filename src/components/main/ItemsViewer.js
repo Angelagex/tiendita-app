@@ -101,7 +101,7 @@ export const ItemsViewer = () => {
       <Container className="products">
         {product.map((item, index) => (
           <Producto>
-            <img src={item.imagen} width= "154px" height= "154px"/>
+            <img src={item.imagen} width= "154px" height= "154px" alt=""/>
             <div className="cardBody">
               <Precio>${item.precio}</Precio>
               <Name>{item.nombre}</Name>

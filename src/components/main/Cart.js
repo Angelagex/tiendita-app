@@ -31,9 +31,9 @@ const Cart = () => {
           item.length===0
           ? <>
           <div className="nothing__main-content">
-          <img src="https://i.ibb.co/yFT91WY/Family-Values-Shopping.png"/> 
+          <img src="https://i.ibb.co/yFT91WY/Family-Values-Shopping.png" alt="Family Shopping"/> 
           <p>
-            Aún no hay nada en el carrito
+            Aún no hay nada en el carrito 
           </p>  
           <Button onClick={handleClose}>Agrega un producto</Button>
         </div>

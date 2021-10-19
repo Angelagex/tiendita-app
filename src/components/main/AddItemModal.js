@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+//import { useDispatch, useSelector } from "react-redux";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import { Container } from "../../styles/globalStyles";
@@ -166,8 +166,8 @@ const AddItemModal = ({item}) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [cantidad, setCantidad] = useState(1)
-  const dispatch = useDispatch();
-  const { product } = useSelector((state) => state.product);
+ // const dispatch = useDispatch();
+ /* const { product } = useSelector((state) => state.product);*/
   console.log(item)
 
   const handleIncrement = () => {

@@ -16,7 +16,7 @@ export const ItemNew = (item) => {
         const newItem = {
             nombre: item.nombre,
             precio: item.precio,
-            medida: item.medida=="Unidades"? item.medida : 500,
+            medida: item.medida==="Unidades"? item.medida : 500,
             imagen: fileUrl            
         }
         

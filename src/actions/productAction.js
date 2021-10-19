@@ -14,7 +14,7 @@ export const ProductNew = (product) => {
         const newProduct = {
             nombre: product.nombre,
             precio: product.precio,
-            medida: product.medida=="Unidades"? product.medida : 500,
+            medida: product.medida==="Unidades"? product.medida : 500,
             imagen: fileUrl
             
         }
@@ -64,7 +64,6 @@ export const Delete = (id) => {
     return async (dispatch, getState) => {
 
         const uid = getState().auth.uid;
-        const product = getState().auth.product;
 
         await db.doc(`${uid}/Product/data/${id}`).delete();
 

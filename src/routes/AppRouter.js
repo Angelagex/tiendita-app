@@ -1,26 +1,26 @@
-import React, { useEffect, useState } from "react";
-import { firebase } from "../firebase/firebase-config";
-import { useDispatch } from "react-redux";
+import React, { useState } from "react";
+//import { firebase } from "../firebase/firebase-config";
+//import { useDispatch } from "react-redux";
 import { HashRouter as Router, Switch, Redirect } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
-import { PrivateRoute } from "./PrivateRoute";
+//import { PrivateRoute } from "./PrivateRoute";
 import { PublicRoute } from "./PublicRoute";
-import { login } from "../actions/authAction";
-import Loading from "../components/Loading";
-import { ListarItem } from "../actions/itemAction";
-import { Main } from "../components/main/Main";
-import { BuyEnd } from "../components/main/BuyEnd";
+//import { login } from "../actions/authAction";
+//import Loading from "../components/Loading";
+//import { ListarItem } from "../actions/itemAction";
+//import { Main } from "../components/main/Main";
+//import { BuyEnd } from "../components/main/BuyEnd";
 import { AdminPanel } from "../components/appcontrol/AdminPanel";
-import { useSelector } from "react-redux";
+//import { useSelector } from "react-redux";
 
 const AppRouter = () => {
-  const [checking, setChecking] = useState(true);
-  const [isLooggedIn, setsIsLoogedIn] = useState(false);
+  //const [checking, setChecking] = useState(true);
+  //const [isLooggedIn, setsIsLoogedIn] = useState(false);
 
-  const dispatch = useDispatch();
+ // const dispatch = useDispatch();
   /*
   useEffect(() => {
     firebase.auth().onAuthStateChanged(async (user) => {

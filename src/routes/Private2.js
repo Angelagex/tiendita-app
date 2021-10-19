@@ -2,15 +2,15 @@ import React, { useEffect, useState } from "react";
 import { firebase } from "../firebase/firebase-config";
 import { useDispatch } from "react-redux";
 import { Redirect, Route } from "react-router-dom";
-import { useSelector } from "react-redux";
+//import { useSelector } from "react-redux";
 import { login } from "../actions/authAction";
-import Loading from "../components/Loading";
+//import Loading from "../components/Loading";
 import { ListarItem } from "../actions/itemAction";
 import { ListarProduct } from "../actions/productAction";
 
 export const PrivateRoute = ({ component: Component, ...rest }) => {
 
-    const [checking, setChecking] = useState(true);
+   // const [checking, setChecking] = useState(true);
     const [isLooggedIn, setsIsLoogedIn] = useState(false);
     const dispatch = useDispatch();
 
@@ -25,7 +25,7 @@ export const PrivateRoute = ({ component: Component, ...rest }) => {
                 setsIsLoogedIn(false)
             }
         })
-    }, [dispatch, setChecking])
+    }, [dispatch])
 
   return (
     <Route

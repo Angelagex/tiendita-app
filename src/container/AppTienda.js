@@ -1,6 +1,5 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import AppRouter from "../routes/AppRouter";
+//import AppRouter from "../routes/AppRouter";
 import GlobalStyles from "../styles/globalStyles";
 import { Provider } from "react-redux";
 import { store } from "../store/store";

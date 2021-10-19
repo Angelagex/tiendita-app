@@ -1,10 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useRef, useState } from "react";
+import { useDispatch } from "react-redux";
 import {
   ProductNew,
   startUploading,
   clearProduct,
-  Edit,
 } from "../../actions/productAction";
 import { useForm } from "../../hooks/useForm";
 import Modal from "react-bootstrap/Modal";
@@ -25,7 +24,7 @@ const AddProduct = () => {
     imagen: "",
   });
 
-  const { nombre, precio, medida, imagen } = formValue;
+  const { nombre, precio, medida } = formValue;
 
   const handleFileChange = (e) => {
     file = e.target.files[0];
@@ -46,9 +45,9 @@ const AddProduct = () => {
     inputFile.current.click();
   };
 
-  const handleViewChange = (e) => {
+  /*const handleViewChange = (e) => {
     console.log(e.target.value)
-  }
+  }*/
 
   return (
     <>
